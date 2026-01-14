@@ -19,7 +19,17 @@ venmach = {
     42 : ['Fanta',3.0],
     43 : ['7UP',3.0],
     44 : ['Sprite',3.0],
-    45 : ['Pepsi',3.0]
+    45 : ['Pepsi',3.0],
+    51 : ['Espresso', 3.0],
+    52 : ['Americano', 3.0],
+    53 : ['Mocha', 3.0],
+    54 : ['Latte', 3.0],
+    55 : ['Macchiato', 3.0],
+    61 : ['Croissant', 3.0],
+    62 : ['Brownie', 3.0],
+    63 : ['Blueberry tart', 3.0],
+    64 : ['Cookie', 3.0],
+    65 : ['Muffin', 3.0]
     }
 
 def select_process():
@@ -145,7 +155,33 @@ def menu_soda():
     pepsi = 45
     print('Pepsi - 45')
 
-    select_process()     
+    select_process()
+
+def menu_coffee():
+    print(' ')
+    print('Coffee - 3 AED')
+    print(' ')
+
+    print('Espresso - 51')
+    print('Americano - 52')
+    print('Mocha - 53')
+    print('Latte - 54') 
+    print('Macchiato - 55')
+
+    select_process()
+
+def menu_pastry():
+    print(' ')
+    print('Pastry - 3 AED')
+    print(' ')
+
+    print('Croissant - 61')
+    print('Brownie - 62')
+    print('Blueberry tart - 63')
+    print('Cookie - 64')
+    print('Muffin - 65')    
+
+    select_process()   
 
 def water_process():
     print(' ')
@@ -188,29 +224,34 @@ def start_process():
     print(' ')
     print('Hello! Please select your choice of snack.')
     print(' ')
-    list = ['chips','juices','candies','water']
-    print('Chips | Juices | Sodas | Candies | Water') #prints vailable classification options
+    list = ['chips','juices','candies','water','coffee','pastry']
+    print('Chips | Juices | Sodas | Candies | Water | Coffee | Pastry') #prints vailable classification options
     choice = input('Please input: ') #prompts the user for their choice                                              
 
-    while True:
-        if  choice.lower() == 'chips': #checks if the either all the criteria below are met
-            menu_chips()
-            break
-        elif choice.lower() == 'candies':
-            menu_candy()
-            break
-        elif choice.lower() == 'juices':
-            menu_juice()
-            break
-        elif choice.lower() == 'sodas':
-            menu_soda()
-            break
-        elif choice.lower() == 'water':
-            water_process()
-            break
 
-        else:
-            print('Choice is not available.')
-            break
+    if  choice.lower() == 'chips': #checks if the either all the criteria below are met
+        menu_chips()
+
+    elif choice.lower() == 'candies':
+        menu_candy()
+
+    elif choice.lower() == 'juices':
+        menu_juice()
+            
+    elif choice.lower() == 'sodas':
+        menu_soda()
+
+    elif choice.lower() == 'water':
+        water_process()
+
+    elif choice.lower() == 'coffee':
+        menu_coffee()
+
+    elif choice.lower() == 'pastry':
+        menu_pastry()
+        
+    else:
+        print('Choice is not available.')
+            
 
 start_process()
