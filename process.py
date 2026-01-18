@@ -208,7 +208,9 @@ def water_process():
             else:
                 print('Thank you, enjoy! (One item has been dispensed)')
                 break
-    continue_process()          
+    continue_process() 
+
+         
 
 def continue_process():
     print(' ')
@@ -219,6 +221,7 @@ def continue_process():
         start_process()
     else:
         print('Thank you!')
+        
 
 def start_process():
     print(' ')
